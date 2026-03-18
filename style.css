@@ -1,13 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(240, 244, 255);
+    background-color: rgb(240, 253, 255);
     margin: 0;
     line-height: 1.6;
 }
 
  
 header {
-    background-color: rgb(0, 68, 255);
+    background-color: rgb(195, 0, 255);
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 30px 20px;
@@ -15,7 +15,7 @@ header {
 }
 
 nav {
-    background-color: #4f5e34;
+    background-color: #571307;
     text-align: center;
     padding: 12px;
 }
@@ -46,7 +46,7 @@ img {
 
 footer {
     background-color: #07d433;
-    color: rgb(20, 95, 10);
+    color: rgb(204, 82, 194);
     text-align: center;
     padding: 10px;
     margin-top: 20px;
