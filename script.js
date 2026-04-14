@@ -7,6 +7,7 @@ function mostrarMensaje() {
     setTimeout(() => {
         mensaje.style.opacity = "1";
         mensaje.style.transform = "translateY(0)";
+        mensaje.style.textAlign = "center";
     }, 50);
 }
 
@@ -19,5 +20,6 @@ function mostrarMensaje2() {
     setTimeout(() => {
         mensaje.style.opacity = "1";
         mensaje.style.transform = "translateY(0)";
+        mensaje.style.textAlign = "center";
     }, 50);
 }
