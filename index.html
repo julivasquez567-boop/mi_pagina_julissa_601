@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi primera pagina web</title>
+
+    <!-- Tipografía moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css"> 
   </head>
+
   <body>
     <header>
       <h1>Mi Página Personal</h1>
@@ -18,24 +23,15 @@
 
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p id="mensaje2" style="display:none;"></p>
-      <button onclick="mostrarMensaje2()">Algo sobre mi</button>
-      <br><br>
-      <img
-    
-        src="img/tarjeta.png"
-        alt="Foto personal"
-        width="900px"
-        height="600px"
-      />
 
-      <p>Hola, mi nombre es julissa.</p>
+      <p id="mensaje2"></p>
+      <button onclick="mostrarMensaje2()">Algo sobre mí</button>
 
+      <img src="img/tarjeta.png" alt="Foto personal" />
+
+      <p>Hola, mi nombre es Julissa.</p>
       <p>Soy estudiante en el CECYCTEO-35.</p>
-
-      <p>Me gusta la tecnología y apremnder en la escuela.</p>
-
-      
+      <p>Me gusta la tecnología y aprender en la escuela.</p>
     </section>
 
     <section id="pec">
@@ -43,15 +39,11 @@
 
       <h3>Huellas: cuidado animal y salud comunitaria</h3>
 
-      <p id="mensaje" style="display:none;"></p>
+      <p id="mensaje"></p>
       <button onclick="mostrarMensaje()">Mostrar mensaje</button>
-      <br><br>
-<img
-        src="img/banner_pec.png"
-        alt="Foto personal"
-        width="950px"
-        height="650px"
-      />
+
+      <img src="img/banner_pec.png" alt="Proyecto PEC" />
+
       <p>
         Este proyecto busca el cuidado responsable de los perros en la
         comunidad de San Antonino el Alto.
@@ -71,6 +63,7 @@
     <footer>
       <p>2026 - Yulii</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
