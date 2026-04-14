@@ -88,3 +88,8 @@ img:hover {
     transform: scale(1.03);
 }
 
+#mensaje, #mensaje2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
