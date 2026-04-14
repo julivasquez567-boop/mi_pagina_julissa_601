@@ -9,3 +9,15 @@ function mostrarMensaje() {
         mensaje.style.transform = "translateY(0)";
     }, 50);
 }
+
+function mostrarMensaje2() {
+    let mensaje = document.getElementById("mensaje");
+
+    mensaje.innerHTML = " Mi pasatiempo favorito es escuchar muisicas";
+    mensaje.style.display = "block";
+
+    setTimeout(() => {
+        mensaje.style.opacity = "1";
+        mensaje.style.transform = "translateY(0)";
+    }, 50);
+}
