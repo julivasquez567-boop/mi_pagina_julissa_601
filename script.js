@@ -11,7 +11,7 @@ function mostrarMensaje() {
 }
 
 function mostrarMensaje2() {
-    let mensaje = document.getElementById("mensaje");
+    let mensaje = document.getElementById("mensaje2");
 
     mensaje.innerHTML = " Mi pasatiempo favorito es escuchar muisicas";
     mensaje.style.display = "block";
