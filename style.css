@@ -109,65 +109,46 @@ footer {
     margin-top: 20px;
 }
 
+
 .whatsapp-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   background-color: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  animation: float 2s infinite ease-in-out;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.whatsapp-btn {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  width: 45px;
-  height: 45px;
-  background-color: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   z-index: 1000;
   animation: float 2s infinite ease-in-out;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .whatsapp-btn img {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
 
-/* Hover efecto */
 .whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+  transform: scale(1.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
-/* Animación flotante */
 @keyframes float {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
   100% { transform: translateY(0); }
 }
 
-/* Efecto de pulso */
 .whatsapp-btn::before {
   content: "";
   position: absolute;
-  width: 45px;
-  height: 45px;
-  background: rgba(37, 211, 102, 0.5);
+  width: 65px;
+  height: 65px;
+  background: rgba(37, 211, 102, 0.4);
   border-radius: 50%;
   animation: pulse 2s infinite;
   z-index: -1;
@@ -179,13 +160,31 @@ footer {
     opacity: 0.7;
   }
   70% {
-    transform: scale(1.4);
+    transform: scale(1.5);
     opacity: 0;
   }
   100% {
     opacity: 0;
   }
 }
+.whatsapp-btn::after {
+  content: "Chat";
+  position: absolute;
+  right: 75px;
+  background: #25D366;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover::after {
+  opacity: 1;
+}
+
+
 
 .facebook-btn {
   position: fixed;
