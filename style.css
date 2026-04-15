@@ -110,6 +110,9 @@ footer {
 }
 
 
+/* =========================
+   WHATSAPP
+========================= */
 .whatsapp-btn {
   position: fixed;
   bottom: 20px;
@@ -132,26 +135,69 @@ footer {
   height: 35px;
 }
 
-.whatsapp-btn:hover {
+/* =========================
+   FACEBOOK (MISMO TAMAÑO)
+========================= */
+.facebook-btn {
+  position: fixed;
+  bottom: 95px; /* 🔥 arriba del WhatsApp */
+  right: 20px;  /* mismo alineado */
+  width: 65px;  /* 🔥 mismo tamaño */
+  height: 65px; /* 🔥 mismo tamaño */
+  background-color: #1877F2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  animation: float 2s infinite ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facebook-btn img {
+  width: 35px;
+  height: 35px;
+}
+
+/* =========================
+   HOVER (AMBOS)
+========================= */
+.whatsapp-btn:hover,
+.facebook-btn:hover {
   transform: scale(1.15);
   box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
+/* =========================
+   ANIMACIÓN
+========================= */
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0); }
 }
 
-.whatsapp-btn::before {
+/* =========================
+   PULSO (AMBOS)
+========================= */
+.whatsapp-btn::before,
+.facebook-btn::before {
   content: "";
   position: absolute;
   width: 65px;
   height: 65px;
-  background: rgba(37, 211, 102, 0.4);
   border-radius: 50%;
   animation: pulse 2s infinite;
   z-index: -1;
+}
+
+.whatsapp-btn::before {
+  background: rgba(37, 211, 102, 0.4);
+}
+
+.facebook-btn::before {
+  background: rgba(24, 119, 242, 0.4);
 }
 
 @keyframes pulse {
@@ -167,61 +213,5 @@ footer {
     opacity: 0;
   }
 }
-.whatsapp-btn::after {
-  content: "Chat";
-  position: absolute;
-  right: 75px;
-  background: #25D366;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 12px;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.whatsapp-btn:hover::after {
-  opacity: 1;
-}
-
-
-
-.facebook-btn {
-  position: fixed;
-  bottom: 75px; /* arriba del de WhatsApp */
-  right: 15px;
-  width: 45px;
-  height: 45px;
-  background-color: #1877F2;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  z-index: 1000;
-  animation: float 2s infinite ease-in-out;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.facebook-btn img {
-  width: 25px;
-  height: 25px;
-}
-
-/* Hover */
-.facebook-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
-}
-
-/* Pulso */
-.facebook-btn::before {
-  content: "";
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  background: rgba(24, 119, 242, 0.5);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-  z-index: -1;
-}
+bottom: 100px; /* facebook */
+bottom: 20px;  /* whatsapp */
