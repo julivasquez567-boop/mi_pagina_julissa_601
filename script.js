@@ -45,3 +45,15 @@ function mostrarMensaje2() {
         boton.innerText = "Ocultar mensaje";
     }
 }
+
+function abrirModal() {
+    let modal = document.getElementById("modal");
+    let img = document.getElementById("imagenModal");
+
+    modal.style.display = "block";
+    img.src = "img/tarjeta.png"; // cambia por la imagen que quieras
+}
+
+function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+}
