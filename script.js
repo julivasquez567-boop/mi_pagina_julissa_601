@@ -57,3 +57,29 @@ function abrirModal() {
 function cerrarModal() {
     document.getElementById("modal").style.display = "none";
 }
+
+function toggleModo() {
+    let body = document.body;
+    let boton = document.getElementById("modo-btn");
+
+    body.classList.toggle("dark-mode");
+
+    // Cambiar icono
+    if (body.classList.contains("dark-mode")) {
+        boton.innerHTML = "☀️";
+        localStorage.setItem("modo", "oscuro");
+    } else {
+        boton.innerHTML = "🌙";
+        localStorage.setItem("modo", "claro");
+    }
+}
+
+// Mantener modo al recargar
+window.onload = function () {
+    let modoGuardado = localStorage.getItem("modo");
+
+    if (modoGuardado === "oscuro") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("modo-btn").innerHTML = "☀️";
+    }
+}
