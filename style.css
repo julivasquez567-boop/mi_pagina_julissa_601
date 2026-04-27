@@ -245,28 +245,54 @@ bottom: 20px;  /* whatsapp */
   cursor: pointer;
 }
 
-function toggleModo() {
-    let body = document.body;
-    let boton = document.getElementById("modo-btn");
-
-    body.classList.toggle("dark-mode");
-
-    // Cambiar icono
-    if (body.classList.contains("dark-mode")) {
-        boton.innerHTML = "☀️";
-        localStorage.setItem("modo", "oscuro");
-    } else {
-        boton.innerHTML = "🌙";
-        localStorage.setItem("modo", "claro");
-    }
+/* BOTÓN MODO OSCURO */
+#modo-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  z-index: 3000;
+  transition: all 0.4s ease;
 }
 
-// Mantener modo al recargar
-window.onload = function () {
-    let modoGuardado = localStorage.getItem("modo");
+/* ANIMACIÓN SUAVE EN TODA LA PÁGINA */
+body, header, nav, section, footer {
+  transition: background 0.5s, color 0.5s;
+}
 
-    if (modoGuardado === "oscuro") {
-        document.body.classList.add("dark-mode");
-        document.getElementById("modo-btn").innerHTML = "☀️";
-    }
+/* 🌙 MODO OSCURO */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode header {
+  background: linear-gradient(135deg, #232526, #414345);
+}
+
+.dark-mode nav {
+  background-color: #111;
+}
+
+.dark-mode section {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+.dark-mode footer {
+  background-color: #111;
+}
+
+.dark-mode h2 {
+  color: #9d7bff;
+}
+
+.dark-mode button {
+  background: linear-gradient(135deg, #434343, #000000);
 }

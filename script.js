@@ -46,6 +46,7 @@ function mostrarMensaje2() {
     }
 }
 
+
 function abrirModal() {
     let modal = document.getElementById("modal");
     let img = document.getElementById("imagenModal");
@@ -64,21 +65,20 @@ function toggleModo() {
 
     body.classList.toggle("dark-mode");
 
-    // Cambiar icono
     if (body.classList.contains("dark-mode")) {
-        boton.innerHTML = "☀️";
+        boton.innerHTML = "☀️"; // sol
         localStorage.setItem("modo", "oscuro");
     } else {
-        boton.innerHTML = "🌙";
+        boton.innerHTML = "🌙"; // luna
         localStorage.setItem("modo", "claro");
     }
 }
 
-// Mantener modo al recargar
+// GUARDAR EL MODO AL RECARGAR
 window.onload = function () {
-    let modoGuardado = localStorage.getItem("modo");
+    let modo = localStorage.getItem("modo");
 
-    if (modoGuardado === "oscuro") {
+    if (modo === "oscuro") {
         document.body.classList.add("dark-mode");
         document.getElementById("modo-btn").innerHTML = "☀️";
     }
