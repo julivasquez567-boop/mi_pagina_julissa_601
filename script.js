@@ -84,11 +84,3 @@ window.onload = function () {
     }
 }
 
-<script>
-function subir(){
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-</script>

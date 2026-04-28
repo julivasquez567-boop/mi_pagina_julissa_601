@@ -84,7 +84,6 @@
         alt="Facebook">
 </a>
 
-<button id="topBtn" onclick="subir()">⬆</button>
 
 <button onclick="abrirModal()">Ver imagen</button>
 
@@ -94,6 +93,21 @@
 </div>
 
 <button id="modo-btn" onclick="toggleModo()">🌙</button>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<div id="particles-js"></div>
+
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 }
+  }
+});
+</script>
+
 
   </body>
 </html>
