@@ -47,32 +47,7 @@ function mostrarMensaje2() {
 }
 
 
-function abrirModal() {
-    let modal = document.getElementById("modal");
-    let img = document.getElementById("imagenModal");
 
-    modal.style.display = "block";
-    img.src = "img/tarjeta.png"; // cambia por la imagen que quieras
-}
-
-function cerrarModal() {
-    document.getElementById("modal").style.display = "none";
-}
-
-function toggleModo() {
-    let body = document.body;
-    let boton = document.getElementById("modo-btn");
-
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-        boton.innerHTML = "☀️"; // sol
-        localStorage.setItem("modo", "oscuro");
-    } else {
-        boton.innerHTML = "🌙"; // luna
-        localStorage.setItem("modo", "claro");
-    }
-}
 
 // GUARDAR EL MODO AL RECARGAR
 window.onload = function () {
