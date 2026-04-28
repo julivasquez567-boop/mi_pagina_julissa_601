@@ -98,16 +98,83 @@
 <div id="particles-js"></div>
 
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+    background:#111;
+    color:white;
+    text-align:center;
+    margin-top:100px;
+    font-family:Arial;
+}
+
+button{
+    padding:15px 30px;
+    margin:10px;
+    border:none;
+    border-radius:15px;
+    background:hotpink;
+    color:white;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Piedra Papel o Tijera</h1>
+
+<button onclick="jugar('piedra')">🪨 Piedra</button>
+
+<button onclick="jugar('papel')">📄 Papel</button>
+
+<button onclick="jugar('tijera')">✂ Tijera</button>
+
+<h2 id="resultado"></h2>
+
 <script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    size: { value: 3 },
-    move: { speed: 2 }
-  }
-});
+
+function jugar(usuario){
+
+    const opciones = ["piedra","papel","tijera"];
+
+    const cpu = opciones[Math.floor(Math.random()*3)];
+
+    let resultado = "";
+
+    if(usuario === cpu){
+
+        resultado = "Empate";
+
+    }else if(
+        (usuario === "piedra" && cpu === "tijera") ||
+        (usuario === "papel" && cpu === "piedra") ||
+        (usuario === "tijera" && cpu === "papel")
+    ){
+
+        resultado = "Ganaste 🎉";
+
+    }else{
+
+        resultado = "Perdiste 😢";
+
+    }
+
+    document.getElementById("resultado").innerHTML =
+        "CPU: " + cpu + "<br>" + resultado;
+
+}
+
 </script>
 
+</body>
+</html>
 
   </body>
 </html>
