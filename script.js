@@ -83,3 +83,12 @@ window.onload = function () {
         document.getElementById("modo-btn").innerHTML = "☀️";
     }
 }
+
+<script>
+function subir(){
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+</script>

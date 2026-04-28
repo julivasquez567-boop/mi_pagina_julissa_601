@@ -296,3 +296,15 @@ body, header, nav, section, footer {
 .dark-mode button {
   background: linear-gradient(135deg, #434343, #000000);
 }
+
+#topBtn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background: hotpink;
+  color: white;
+  cursor: pointer;
+}
