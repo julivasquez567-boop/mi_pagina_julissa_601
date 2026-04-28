@@ -1,101 +1,148 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi primera pagina web</title>
 
-    <!-- Tipografía moderna -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<head>
 
-    <link rel="stylesheet" href="style.css"> 
-  </head>
+  <meta charset="UTF-8" />
 
-  <body>
-    <header>
-      <h1>Mi Página Personal</h1>
-    </header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#pec">Proyecto PEC</a>
-    </nav>
+  <title>Mi Página Personal</title>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
+  <!-- Tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-      <p id="mensaje2"></p>
-      <button onclick="mostrarMensaje2()">Algo sobre mí</button>
-<br><br>
-      <img src="img/tarjeta.png" alt="Foto personal" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-      <p>Hola, mi nombre es Julissa.</p>
-      <p>Soy estudiante en el CECYCTEO-35.</p>
-      <p>Me gusta la tecnología y aprender en la escuela.</p>
-    </section>
+</head>
 
-    <section id="pec">
-      <h2>Proyecto Escolar Comunitario</h2>
+<body>
 
-      <h3>Huellas: cuidado animal y salud comunitaria</h3>
+  <!-- PARTICLES -->
+  <div id="particles-js"></div>
 
-      <p id="mensaje"></p>
-      <button onclick="mostrarMensaje()">Mostrar mensaje</button>
-<br><br>
-      <img src="img/banner_pec.png" alt="Proyecto PEC" />
+  <!-- HEADER -->
+  <header>
 
-      <p>
-        Este proyecto busca el cuidado responsable de los perros en la
-        comunidad de San Antonino el Alto.
-      </p>
+    <h1>Mi Página Personal ✨</h1>
 
-      <p>
-        La problemática principal es la presencia de perros en la vía pública,
-        muchos de ellos sin esterilizar o sin vacunas.
-      </p>
+  </header>
 
-      <p>
-        A través de este proyecto se busca crear conciencia sobre el bienestar
-        animal y la salud comunitaria.
-      </p>
-    </section>
+  <!-- NAV -->
+  <nav>
 
-    <footer>
-      <p>2026 - Yulii</p>
-    </footer>
+    <a href="#sobre-mi">Sobre mí</a>
 
-    <script src="script.js"></script>
-    
-<a href="https://wa.me/9512699758?text=Hola%20quiero%20información" 
-   class="whatsapp-btn" 
-   target="_blank">
+    <a href="#pec">Proyecto PEC</a>
 
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-        alt="WhatsApp">
-</a>
-   
+  </nav>
 
-<a href="https://www.facebook.com/yupis.garcia.9" 
-   class="facebook-btn" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   
-   <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" 
-        alt="Facebook">
-</a>
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="card">
 
+    <h2>Sobre mí 🌸</h2>
 
+    <p id="mensaje2"></p>
 
+    <button onclick="mostrarMensaje2()">
+      Algo sobre mí
+    </button>
 
-<button id="modo-btn" onclick="toggleModo()">🌙</button>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <br><br>
 
-<div id="particles-js"></div>
+    <img src="img/tarjeta.png" alt="Foto personal" />
 
-<div class="card">
-  Mi proyecto
-</div>
+    <p>Hola, mi nombre es Julissa.</p>
 
-  </body>
+    <p>Soy estudiante en el CECYCTEO-35.</p>
+
+    <p>Me gusta la tecnología y aprender en la escuela.</p>
+
+  </section>
+
+  <!-- PROYECTO -->
+  <section id="pec" class="card">
+
+    <h2>Proyecto Escolar Comunitario 🐾</h2>
+
+    <h3>Huellas: cuidado animal y salud comunitaria</h3>
+
+    <p id="mensaje"></p>
+
+    <button onclick="mostrarMensaje()">
+      Mostrar mensaje
+    </button>
+
+    <br><br>
+
+    <img src="img/banner_pec.png" alt="Proyecto PEC" />
+
+    <p>
+      Este proyecto busca el cuidado responsable de los perros
+      en la comunidad de San Antonino el Alto.
+    </p>
+
+    <p>
+      La problemática principal es la presencia de perros
+      en la vía pública, muchos de ellos sin esterilizar
+      o sin vacunas.
+    </p>
+
+    <p>
+      A través de este proyecto se busca crear conciencia
+      sobre el bienestar animal y la salud comunitaria.
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>© 2026 - Yulii 💖</p>
+
+  </footer>
+
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/9512699758?text=Hola%20quiero%20información"
+     class="whatsapp-btn"
+     target="_blank">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp">
+
+  </a>
+
+  <!-- BOTÓN FACEBOOK -->
+  <a href="https://www.facebook.com/yupis.garcia.9"
+     class="facebook-btn"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+         alt="Facebook">
+
+  </a>
+
+  <!-- BOTÓN MODO OSCURO -->
+  <button id="modo-btn" onclick="toggleModo()">
+    🌙
+  </button>
+
+  <!-- BOTÓN SUBIR -->
+  <button id="topBtn"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+    ⬆
+
+  </button>
+
+  <!-- LIBRERÍA PARTICLES -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
 </html>
-

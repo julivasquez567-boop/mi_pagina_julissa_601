@@ -1,286 +1,517 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f8fb;
-    margin: 0;
-    line-height: 1.6;
-    color: #333;
+/* =========================
+   GENERAL
+========================= */
+
+html{
+  scroll-behavior:smooth;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #4a90e2, #6a11cb);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+body{
+  font-family:'Poppins', sans-serif;
+  background-color:#f4f8fb;
+  margin:0;
+  line-height:1.6;
+  color:#333;
+  overflow-x:hidden;
 }
 
-h1 {
-    font-size: 2.8em;
-    letter-spacing: 1px;
+/* =========================
+   HEADER
+========================= */
+
+header{
+  background:linear-gradient(135deg,#4a90e2,#6a11cb);
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* NAV */
-nav {
-    background-color: #222;
-    text-align: center;
-    padding: 12px;
+h1{
+  font-size:2.8em;
+  letter-spacing:1px;
+  text-shadow:0 0 10px rgba(255,255,255,0.3);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+/* =========================
+   NAV
+========================= */
+
+nav{
+  background-color:#222;
+  text-align:center;
+  padding:15px;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-nav a:hover {
-    color: #6a11cb;
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 15px;
+  font-weight:bold;
+  transition:0.3s;
 }
 
-/* SECCIONES */
-section {
-    background-color: white;
-    margin: 30px auto;
-    padding: 30px;
-    width: 75%;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
+nav a:hover{
+  color:#6a11cb;
 }
 
-h2 {
-    color: #6a11cb;
+/* =========================
+   SECCIONES
+========================= */
+
+section{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(10px);
+
+  margin:30px auto;
+  padding:30px;
+  width:75%;
+
+  border-radius:20px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+
+  text-align:center;
+
+  transition:0.4s;
 }
 
-/* IMÁGENES */
-img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 15px;
-    margin-top: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    transition: transform 0.4s, box-shadow 0.4s;
+section:hover{
+  transform:translateY(-5px);
 }
 
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+h2{
+  color:#6a11cb;
 }
 
-/* BOTONES */
-button {
-    margin-top: 10px;
-    padding: 12px 25px;
-    font-size: 16px;
-    background: linear-gradient(135deg, #36d1dc, #5b86e5);
-    border: none;
-    border-radius: 30px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* =========================
+   IMÁGENES
+========================= */
+
+img{
+  width:100%;
+  max-width:800px;
+  height:auto;
+
+  border-radius:15px;
+
+  margin-top:15px;
+
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+
+  transition:transform 0.4s, box-shadow 0.4s;
+
+  animation:float 3s ease-in-out infinite;
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+img:hover{
+  transform:scale(1.05);
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-button:active {
-    transform: scale(0.95);
+/* =========================
+   BOTONES
+========================= */
+
+button{
+  margin-top:10px;
+
+  padding:12px 25px;
+
+  font-size:16px;
+
+  background:linear-gradient(
+    135deg,
+    #36d1dc,
+    #5b86e5
+  );
+
+  border:none;
+
+  border-radius:30px;
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:all 0.3s ease;
 }
 
-/* MENSAJES ANIMADOS */
-#mensaje, #mensaje2 {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-    font-weight: bold;
-    color: #4a90e2;
-    margin-top: 15px;
+button:hover{
+  transform:translateY(-3px);
+
+  box-shadow:0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* FOOTER */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+button:active{
+  transform:scale(0.95);
 }
 
+/* =========================
+   MENSAJES
+========================= */
+
+#mensaje,
+#mensaje2{
+
+  opacity:0;
+
+  transform:translateY(30px);
+
+  transition:all 0.6s ease;
+
+  font-weight:bold;
+
+  color:#4a90e2;
+
+  margin-top:15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background-color:#222;
+
+  color:white;
+
+  text-align:center;
+
+  padding:15px;
+
+  margin-top:20px;
+}
 
 /* =========================
    WHATSAPP
 ========================= */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 65px;
-  height: 65px;
-  background-color: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 1000;
-  animation: float 2s infinite ease-in-out;
-  transition: transform 0.3s, box-shadow 0.3s;
+
+.whatsapp-btn{
+
+  position:fixed;
+
+  bottom:20px;
+
+  right:20px;
+
+  width:65px;
+  height:65px;
+
+  background-color:#25D366;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+
+  z-index:1000;
+
+  animation:float 2s infinite ease-in-out;
+
+  transition:transform 0.3s, box-shadow 0.3s;
 }
 
-.whatsapp-btn img {
-  width: 35px;
-  height: 35px;
-}
-
-/* =========================
-   FACEBOOK (MISMO TAMAÑO)
-========================= */
-.facebook-btn {
-  position: fixed;
-  bottom: 95px; /* 🔥 arriba del WhatsApp */
-  right: 20px;  /* mismo alineado */
-  width: 65px;  /* 🔥 mismo tamaño */
-  height: 65px; /* 🔥 mismo tamaño */
-  background-color: #1877F2;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  z-index: 1000;
-  animation: float 2s infinite ease-in-out;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.facebook-btn img {
-  width: 35px;
-  height: 35px;
+.whatsapp-btn img{
+  width:35px;
+  height:35px;
 }
 
 /* =========================
-   HOVER (AMBOS)
+   FACEBOOK
 ========================= */
+
+.facebook-btn{
+
+  position:fixed;
+
+  bottom:95px;
+
+  right:20px;
+
+  width:65px;
+  height:65px;
+
+  background-color:#1877F2;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+
+  z-index:1000;
+
+  animation:float 2s infinite ease-in-out;
+
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.facebook-btn img{
+  width:35px;
+  height:35px;
+}
+
+/* =========================
+   HOVER BOTONES
+========================= */
+
 .whatsapp-btn:hover,
-.facebook-btn:hover {
-  transform: scale(1.15);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+.facebook-btn:hover{
+
+  transform:scale(1.15);
+
+  box-shadow:0 6px 15px rgba(0,0,0,0.4);
 }
 
 /* =========================
-   ANIMACIÓN
+   PULSO
 ========================= */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
 
-/* =========================
-   PULSO (AMBOS)
-========================= */
 .whatsapp-btn::before,
-.facebook-btn::before {
-  content: "";
-  position: absolute;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-  z-index: -1;
+.facebook-btn::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:65px;
+  height:65px;
+
+  border-radius:50%;
+
+  animation:pulse 2s infinite;
+
+  z-index:-1;
 }
 
-.whatsapp-btn::before {
-  background: rgba(37, 211, 102, 0.4);
+.whatsapp-btn::before{
+  background:rgba(37,211,102,0.4);
 }
 
-.facebook-btn::before {
-  background: rgba(24, 119, 242, 0.4);
+.facebook-btn::before{
+  background:rgba(24,119,242,0.4);
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  70% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-bottom: 100px; /* facebook */
-bottom: 20px;  /* whatsapp */
+/* =========================
+   BOTÓN MODO OSCURO
+========================= */
 
+#modo-btn{
 
+  position:fixed;
 
-/* BOTÓN MODO OSCURO */
-#modo-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 22px;
-  padding: 10px 15px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  background: #222;
-  color: white;
-  z-index: 3000;
-  transition: all 0.4s ease;
+  top:20px;
+
+  right:20px;
+
+  font-size:22px;
+
+  padding:10px 15px;
+
+  border-radius:50%;
+
+  border:none;
+
+  cursor:pointer;
+
+  background:#222;
+
+  color:white;
+
+  z-index:3000;
+
+  transition:all 0.4s ease;
 }
 
-/* ANIMACIÓN SUAVE EN TODA LA PÁGINA */
-body, header, nav, section, footer {
-  transition: background 0.5s, color 0.5s;
+/* =========================
+   BOTÓN SUBIR
+========================= */
+
+#topBtn{
+
+  position:fixed;
+
+  bottom:20px;
+
+  left:20px;
+
+  width:55px;
+
+  height:55px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#6a11cb;
+
+  color:white;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  z-index:999;
 }
 
-/* 🌙 MODO OSCURO */
-.dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
+/* =========================
+   MODO OSCURO
+========================= */
+
+body,
+header,
+nav,
+section,
+footer{
+
+  transition:
+  background 0.5s,
+  color 0.5s;
 }
 
-.dark-mode header {
-  background: linear-gradient(135deg, #232526, #414345);
+.dark-mode{
+
+  background-color:#121212;
+
+  color:#f1f1f1;
 }
 
-.dark-mode nav {
-  background-color: #111;
+.dark-mode header{
+
+  background:linear-gradient(
+    135deg,
+    #232526,
+    #414345
+  );
 }
 
-.dark-mode section {
-  background-color: #1e1e1e;
-  color: #ddd;
+.dark-mode nav{
+  background-color:#111;
 }
 
-.dark-mode footer {
-  background-color: #111;
+.dark-mode section{
+
+  background:rgba(30,30,30,0.9);
+
+  color:#ddd;
 }
 
-.dark-mode h2 {
-  color: #9d7bff;
+.dark-mode footer{
+  background-color:#111;
 }
 
-.dark-mode button {
-  background: linear-gradient(135deg, #434343, #000000);
+.dark-mode h2{
+  color:#9d7bff;
 }
+
+.dark-mode button{
+
+  background:linear-gradient(
+    135deg,
+    #434343,
+    #000000
+  );
+}
+
+/* =========================
+   PARTICLES
+========================= */
 
 #particles-js{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+
+  position:fixed;
+
+  width:100%;
+
+  height:100%;
+
+  z-index:-1;
+
+  top:0;
+
+  left:0;
 }
 
+/* =========================
+   CARDS
+========================= */
+
 .card{
-  transition: transform 0.3s ease;
+  transition:transform 0.3s ease;
 }
 
 .card:hover{
-  transform: scale(1.05);
+  transform:scale(1.03);
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+    opacity:0.7;
+  }
+
+  70%{
+    transform:scale(1.5);
+    opacity:0;
+  }
+
+  100%{
+    opacity:0;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  section{
+    width:90%;
+    padding:20px;
+  }
+
+  h1{
+    font-size:2em;
+  }
+
+  nav a{
+    display:block;
+    margin:10px 0;
+  }
+
 }
