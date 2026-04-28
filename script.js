@@ -137,3 +137,28 @@ window.onload = function () {
     });
 
 }
+/* =========================
+   FAQ
+========================= */
+
+const faqBtns = document.querySelectorAll(".faq-btn");
+
+faqBtns.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    const texto = btn.nextElementSibling;
+
+    if(texto.style.maxHeight){
+
+      texto.style.maxHeight = null;
+
+    } else {
+
+      texto.style.maxHeight =
+      texto.scrollHeight + "px";
+    }
+
+  });
+
+});
