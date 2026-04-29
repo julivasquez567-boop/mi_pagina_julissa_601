@@ -162,3 +162,107 @@ faqBtns.forEach(btn => {
   });
 
 });
+/* =========================
+   FAQ ACORDEÓN
+========================= */
+
+const faqBtns = document.querySelectorAll(".faq-btn");
+
+faqBtns.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    const texto = btn.nextElementSibling;
+    const icon = btn.querySelector(".icon");
+
+    texto.classList.toggle("activo");
+
+    if(texto.classList.contains("activo")){
+
+      texto.style.maxHeight =
+      texto.scrollHeight + "px";
+
+      icon.innerHTML = "−";
+
+    } else {
+
+      texto.style.maxHeight = null;
+
+      icon.innerHTML = "+";
+    }
+
+  });
+
+});
+
+
+/* =========================
+   CARRUSEL
+========================= */
+
+let slides =
+document.querySelectorAll(".slide");
+
+let index = 0;
+
+function cambiarSlide(){
+
+  slides[index].classList.remove("active");
+
+  index++;
+
+  if(index >= slides.length){
+    index = 0;
+  }
+
+  slides[index].classList.add("active");
+}
+
+setInterval(cambiarSlide, 3000);
+
+
+/* =========================
+   NOTIFICACIÓN
+========================= */
+
+function mostrarToast(texto){
+
+  const toast =
+  document.createElement("div");
+
+  toast.className = "toast";
+
+  toast.innerText = texto;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+
+    toast.classList.remove("show");
+
+    setTimeout(() => {
+      toast.remove();
+    }, 500);
+
+  }, 3000);
+}
+
+
+/* =========================
+   RETROALIMENTACIÓN
+========================= */
+
+document.querySelectorAll("button")
+.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    mostrarToast("✨ Acción realizada correctamente");
+
+  });
+
+});

@@ -574,3 +574,130 @@ footer{
 .faq-texto p{
   margin:15px 0;
 }
+
+/* =========================
+   FAQ MEJORADO
+========================= */
+
+.faq-btn{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.icon{
+
+  font-size:22px;
+
+  transition:0.3s;
+}
+
+.faq-texto{
+
+  max-height:0;
+
+  overflow:hidden;
+
+  transition:max-height 0.5s ease;
+
+  background:#fff;
+
+  border-radius:0 0 12px 12px;
+}
+
+.dark-mode .faq-texto{
+  background:#1f1f1f;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.slider{
+
+  position:relative;
+
+  width:100%;
+
+  max-width:800px;
+
+  margin:auto;
+
+  overflow:hidden;
+
+  border-radius:20px;
+}
+
+.slide{
+
+  width:100%;
+
+  display:none;
+
+  animation:fade 1s;
+}
+
+.slide.active{
+  display:block;
+}
+
+@keyframes fade{
+
+  from{
+    opacity:0.5;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+
+  position:fixed;
+
+  bottom:30px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:#333;
+
+  color:white;
+
+  padding:15px 25px;
+
+  border-radius:30px;
+
+  opacity:0;
+
+  transition:0.5s;
+
+  z-index:5000;
+}
+
+.toast.show{
+  opacity:1;
+}
+
+
+/* =========================
+   EFECTOS BOTONES
+========================= */
+
+button:hover{
+
+  letter-spacing:1px;
+
+  transform:translateY(-4px) scale(1.03);
+}
