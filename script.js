@@ -1,44 +1,268 @@
-function mostrarMensaje(event) {
-  let mensaje = document.getElementById("mensaje");
-  let boton = event.target;
+function mostrarMensaje() {
 
-  if (mensaje.innerHTML !== "") {
-    mensaje.innerHTML = "";
-    boton.innerText = "Mostrar mensaje";
-  } else {
-    mensaje.innerHTML = "🐾 Cuida y protege a los animales 🐾";
-    boton.innerText = "Ocultar mensaje";
-  }
+    let mensaje = document.getElementById("mensaje");
+    let boton = event.target;
+
+    if (mensaje.style.opacity === "1") {
+
+        mensaje.style.opacity = "0";
+        mensaje.style.transform = "translateY(30px)";
+
+        boton.innerText = "Mostrar mensaje";
+
+    } else {
+
+        mensaje.innerHTML =
+        "🐾 Cuida y protege a los animales 🐾";
+
+        mensaje.style.display = "block";
+
+        setTimeout(() => {
+
+            mensaje.style.opacity = "1";
+            mensaje.style.transform = "translateY(0)";
+            mensaje.style.textAlign = "center";
+
+        }, 50);
+
+        boton.innerText = "Ocultar mensaje";
+    }
 }
 
-function mostrarMensaje2(event) {
-  let mensaje = document.getElementById("mensaje2");
-  let boton = event.target;
+function mostrarMensaje2() {
 
-  if (mensaje.innerHTML !== "") {
-    mensaje.innerHTML = "";
-    boton.innerText = "Algo sobre mí";
-  } else {
-    mensaje.innerHTML = "🎧 Me gusta escuchar música";
-    boton.innerText = "Ocultar mensaje";
-  }
+    let mensaje = document.getElementById("mensaje2");
+    let boton = event.target;
+
+    if (mensaje.style.opacity === "1") {
+
+        mensaje.style.opacity = "0";
+        mensaje.style.transform = "translateY(30px)";
+
+        boton.innerText = "Algo sobre mí";
+
+    } else {
+
+        mensaje.innerHTML =
+        "🎧 Mi pasatiempo favorito es escuchar música 🎧";
+
+        mensaje.style.display = "block";
+
+        setTimeout(() => {
+
+            mensaje.style.opacity = "1";
+            mensaje.style.transform = "translateY(0)";
+            mensaje.style.textAlign = "center";
+
+        }, 50);
+
+        boton.innerText = "Ocultar mensaje";
+    }
 }
 
-/* FAQ */
-document.querySelectorAll(".faq-btn").forEach(btn => {
+/* =========================
+   MODO OSCURO
+========================= */
+
+function toggleModo() {
+
+    document.body.classList.toggle("dark-mode");
+
+    let boton = document.getElementById("modo-btn");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        boton.innerHTML = "☀️";
+
+        localStorage.setItem("modo", "oscuro");
+
+    } else {
+
+        boton.innerHTML = "🌙";
+
+        localStorage.setItem("modo", "claro");
+    }
+}
+
+/* =========================
+   GUARDAR MODO
+========================= */
+
+window.onload = function () {
+
+    let modo = localStorage.getItem("modo");
+
+    if (modo === "oscuro") {
+
+        document.body.classList.add("dark-mode");
+
+        document.getElementById("modo-btn").innerHTML = "☀️";
+    }
+
+    /* =========================
+       PARTICLES
+    ========================= */
+
+    particlesJS("particles-js", {
+
+        particles: {
+
+            number: {
+                value: 60
+            },
+
+            color: {
+                value: "#ffffff"
+            },
+
+            shape: {
+                type: "circle"
+            },
+
+            opacity: {
+                value: 0.5
+            },
+
+            size: {
+                value: 3
+            },
+
+            move: {
+                enable: true,
+                speed: 2
+            }
+
+        }
+
+    });
+
+}
+/* =========================
+   FAQ
+========================= */
+
+const faqBtns = document.querySelectorAll(".faq-btn");
+
+faqBtns.forEach(btn => {
+
   btn.addEventListener("click", () => {
-    let texto = btn.nextElementSibling;
-    texto.style.maxHeight =
-      texto.style.maxHeight ? null : texto.scrollHeight + "px";
+
+    const texto = btn.nextElementSibling;
+
+    if(texto.style.maxHeight){
+
+      texto.style.maxHeight = null;
+
+    } else {
+
+      texto.style.maxHeight =
+      texto.scrollHeight + "px";
+    }
+
   });
+
+});
+/* =========================
+   FAQ ACORDEÓN
+========================= */
+
+const faqBtns = document.querySelectorAll(".faq-btn");
+
+faqBtns.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    const texto = btn.nextElementSibling;
+    const icon = btn.querySelector(".icon");
+
+    texto.classList.toggle("activo");
+
+    if(texto.classList.contains("activo")){
+
+      texto.style.maxHeight =
+      texto.scrollHeight + "px";
+
+      icon.innerHTML = "−";
+
+    } else {
+
+      texto.style.maxHeight = null;
+
+      icon.innerHTML = "+";
+    }
+
+  });
+
 });
 
-/* Slider */
-let slides = document.querySelectorAll(".slide");
+
+/* =========================
+   CARRUSEL
+========================= */
+
+let slides =
+document.querySelectorAll(".slide");
+
 let index = 0;
 
-setInterval(() => {
+function cambiarSlide(){
+
   slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
+
+  index++;
+
+  if(index >= slides.length){
+    index = 0;
+  }
+
   slides[index].classList.add("active");
-}, 3000);
+}
+
+setInterval(cambiarSlide, 3000);
+
+
+/* =========================
+   NOTIFICACIÓN
+========================= */
+
+function mostrarToast(texto){
+
+  const toast =
+  document.createElement("div");
+
+  toast.className = "toast";
+
+  toast.innerText = texto;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  setTimeout(() => {
+
+    toast.classList.remove("show");
+
+    setTimeout(() => {
+      toast.remove();
+    }, 500);
+
+  }, 3000);
+}
+
+
+/* =========================
+   RETROALIMENTACIÓN
+========================= */
+
+document.querySelectorAll("button")
+.forEach(btn => {
+
+  btn.addEventListener("click", () => {
+
+    mostrarToast("✨ Acción realizada correctamente");
+
+  });
+
+});
