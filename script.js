@@ -1,4 +1,4 @@
-function mostrarMensaje() {
+function mostrarMensaje(event) {
 
     let mensaje = document.getElementById("mensaje");
     let boton = event.target;
@@ -29,7 +29,7 @@ function mostrarMensaje() {
     }
 }
 
-function mostrarMensaje2() {
+function mostrarMensaje2(event) {
 
     let mensaje = document.getElementById("mensaje2");
     let boton = event.target;
@@ -99,44 +99,18 @@ window.onload = function () {
         document.getElementById("modo-btn").innerHTML = "☀️";
     }
 
-    /* =========================
-       PARTICLES
-    ========================= */
-
     particlesJS("particles-js", {
-
         particles: {
-
-            number: {
-                value: 60
-            },
-
-            color: {
-                value: "#ffffff"
-            },
-
-            shape: {
-                type: "circle"
-            },
-
-            opacity: {
-                value: 0.5
-            },
-
-            size: {
-                value: 3
-            },
-
-            move: {
-                enable: true,
-                speed: 2
-            }
-
+            number: { value: 60 },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            move: { enable: true, speed: 2 }
         }
-
     });
-
 }
+
 /* =========================
    FAQ
 ========================= */
@@ -150,25 +124,22 @@ faqBtns.forEach(btn => {
     const texto = btn.nextElementSibling;
 
     if(texto.style.maxHeight){
-
       texto.style.maxHeight = null;
-
     } else {
-
-      texto.style.maxHeight =
-      texto.scrollHeight + "px";
+      texto.style.maxHeight = texto.scrollHeight + "px";
     }
 
   });
 
 });
+
 /* =========================
    FAQ ACORDEÓN
 ========================= */
 
-const faqBtns = document.querySelectorAll(".faq-btn");
+const faqBtns2 = document.querySelectorAll(".faq-btn");
 
-faqBtns.forEach(btn => {
+faqBtns2.forEach(btn => {
 
   btn.addEventListener("click", () => {
 
@@ -179,29 +150,26 @@ faqBtns.forEach(btn => {
 
     if(texto.classList.contains("activo")){
 
-      texto.style.maxHeight =
-      texto.scrollHeight + "px";
+      texto.style.maxHeight = texto.scrollHeight + "px";
 
-      icon.innerHTML = "−";
+      if(icon) icon.innerHTML = "−";
 
     } else {
 
       texto.style.maxHeight = null;
 
-      icon.innerHTML = "+";
+      if(icon) icon.innerHTML = "+";
     }
 
   });
 
 });
 
-
 /* =========================
    CARRUSEL
 ========================= */
 
-let slides =
-document.querySelectorAll(".slide");
+let slides = document.querySelectorAll(".slide");
 
 let index = 0;
 
@@ -220,18 +188,15 @@ function cambiarSlide(){
 
 setInterval(cambiarSlide, 3000);
 
-
 /* =========================
    NOTIFICACIÓN
 ========================= */
 
 function mostrarToast(texto){
 
-  const toast =
-  document.createElement("div");
+  const toast = document.createElement("div");
 
   toast.className = "toast";
-
   toast.innerText = texto;
 
   document.body.appendChild(toast);
@@ -250,7 +215,6 @@ function mostrarToast(texto){
 
   }, 3000);
 }
-
 
 /* =========================
    RETROALIMENTACIÓN
