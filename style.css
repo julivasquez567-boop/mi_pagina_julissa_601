@@ -1,3 +1,9 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f8fb;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
 /* =========================
    GENERAL
 ========================= */
@@ -6,6 +12,12 @@ html{
   scroll-behavior:smooth;
 }
 
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #4a90e2, #6a11cb);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 body{
   font-family:'Poppins', sans-serif;
   background-color:#f4f8fb;
@@ -15,6 +27,9 @@ body{
   overflow-x:hidden;
 }
 
+h1 {
+    font-size: 2.8em;
+    letter-spacing: 1px;
 /* =========================
    HEADER
 ========================= */
@@ -27,12 +42,22 @@ header{
   box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* NAV */
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 12px;
 h1{
   font-size:2.8em;
   letter-spacing:1px;
   text-shadow:0 0 10px rgba(255,255,255,0.3);
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 /* =========================
    NAV
 ========================= */
@@ -46,6 +71,8 @@ nav{
   z-index:1000;
 }
 
+nav a:hover {
+    color: #6a11cb;
 nav a{
   color:white;
   text-decoration:none;
@@ -54,10 +81,21 @@ nav a{
   transition:0.3s;
 }
 
+/* SECCIONES */
+section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 75%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
 nav a:hover{
   color:#6a11cb;
 }
 
+h2 {
+    color: #6a11cb;
 /* =========================
    SECCIONES
 ========================= */
@@ -79,14 +117,37 @@ section{
   transition:0.4s;
 }
 
+/* IMÁGENES */
+img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.4s, box-shadow 0.4s;
 section:hover{
   transform:translateY(-5px);
 }
 
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 h2{
   color:#6a11cb;
 }
 
+/* BOTONES */
+button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
 /* =========================
    IMÁGENES
 ========================= */
@@ -107,12 +168,17 @@ img{
   animation:float 3s ease-in-out infinite;
 }
 
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 img:hover{
   transform:scale(1.05);
 
   box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
+button:active {
+    transform: scale(0.95);
 /* =========================
    BOTONES
 ========================= */
@@ -141,12 +207,27 @@ button{
   transition:all 0.3s ease;
 }
 
+/* MENSAJES ANIMADOS */
+#mensaje, #mensaje2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-top: 15px;
 button:hover{
   transform:translateY(-3px);
 
   box-shadow:0 8px 15px rgba(0,0,0,0.2);
 }
 
+/* FOOTER */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 button:active{
   transform:scale(0.95);
 }
@@ -172,8 +253,29 @@ button:active{
 }
 
 /* =========================
+   WHATSAPP
    FOOTER
 ========================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  animation: float 2s infinite ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-btn img {
+  width: 35px;
+  height: 35px;
 
 footer{
   background-color:#222;
@@ -188,8 +290,29 @@ footer{
 }
 
 /* =========================
+   FACEBOOK (MISMO TAMAÑO)
    WHATSAPP
 ========================= */
+.facebook-btn {
+  position: fixed;
+  bottom: 95px; /* 🔥 arriba del WhatsApp */
+  right: 20px;  /* mismo alineado */
+  width: 65px;  /* 🔥 mismo tamaño */
+  height: 65px; /* 🔥 mismo tamaño */
+  background-color: #1877F2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  animation: float 2s infinite ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facebook-btn img {
+  width: 35px;
+  height: 35px;
 
 .whatsapp-btn{
 
@@ -227,8 +350,13 @@ footer{
 }
 
 /* =========================
+   HOVER (AMBOS)
    FACEBOOK
 ========================= */
+.whatsapp-btn:hover,
+.facebook-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 
 .facebook-btn{
 
@@ -266,8 +394,13 @@ footer{
 }
 
 /* =========================
+   ANIMACIÓN
    HOVER BOTONES
 ========================= */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 
 .whatsapp-btn:hover,
 .facebook-btn:hover{
@@ -278,10 +411,19 @@ footer{
 }
 
 /* =========================
+   PULSO (AMBOS)
    PULSO
 ========================= */
 
 .whatsapp-btn::before,
+.facebook-btn::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  z-index: -1;
 .facebook-btn::before{
 
   content:"";
@@ -298,14 +440,30 @@ footer{
   z-index:-1;
 }
 
+.whatsapp-btn::before {
+  background: rgba(37, 211, 102, 0.4);
 .whatsapp-btn::before{
   background:rgba(37,211,102,0.4);
 }
 
+.facebook-btn::before {
+  background: rgba(24, 119, 242, 0.4);
 .facebook-btn::before{
   background:rgba(24,119,242,0.4);
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 /* =========================
    BOTÓN MODO OSCURO
 ========================= */
@@ -336,6 +494,8 @@ footer{
 
   transition:all 0.4s ease;
 }
+bottom: 100px; /* facebook */
+bottom: 20px;  /* whatsapp */
 
 /* =========================
    BOTÓN SUBIR
@@ -359,6 +519,20 @@ footer{
 
   background:#6a11cb;
 
+/* BOTÓN MODO OSCURO */
+#modo-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  z-index: 3000;
+  transition: all 0.4s ease;
   color:white;
 
   font-size:20px;
@@ -368,6 +542,9 @@ footer{
   z-index:999;
 }
 
+/* ANIMACIÓN SUAVE EN TODA LA PÁGINA */
+body, header, nav, section, footer {
+  transition: background 0.5s, color 0.5s;
 /* =========================
    MODO OSCURO
 ========================= */
@@ -383,6 +560,10 @@ footer{
   color 0.5s;
 }
 
+/* 🌙 MODO OSCURO */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
 .dark-mode{
 
   background-color:#121212;
@@ -390,6 +571,8 @@ footer{
   color:#f1f1f1;
 }
 
+.dark-mode header {
+  background: linear-gradient(135deg, #232526, #414345);
 .dark-mode header{
 
   background:linear-gradient(
@@ -399,10 +582,15 @@ footer{
   );
 }
 
+.dark-mode nav {
+  background-color: #111;
 .dark-mode nav{
   background-color:#111;
 }
 
+.dark-mode section {
+  background-color: #1e1e1e;
+  color: #ddd;
 .dark-mode section{
 
   background:rgba(30,30,30,0.9);
@@ -410,14 +598,20 @@ footer{
   color:#ddd;
 }
 
+.dark-mode footer {
+  background-color: #111;
 .dark-mode footer{
   background-color:#111;
 }
 
+.dark-mode h2 {
+  color: #9d7bff;
 .dark-mode h2{
   color:#9d7bff;
 }
 
+.dark-mode button {
+  background: linear-gradient(135deg, #434343, #000000);
 .dark-mode button{
 
   background:linear-gradient(
@@ -432,6 +626,10 @@ footer{
 ========================= */
 
 #particles-js{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 
   position:fixed;
 
@@ -451,10 +649,12 @@ footer{
 ========================= */
 
 .card{
+  transition: transform 0.3s ease;
   transition:transform 0.3s ease;
 }
 
 .card:hover{
+  transform: scale(1.05);
   transform:scale(1.03);
 }
 
@@ -514,190 +714,4 @@ footer{
     margin:10px 0;
   }
 
-}
-
-
-/* =========================
-   FAQ
-========================= */
-
-.faq{
-  margin-top:20px;
-}
-
-.faq-btn{
-
-  width:100%;
-
-  text-align:left;
-
-  padding:15px;
-
-  font-size:18px;
-
-  border:none;
-
-  border-radius:12px;
-
-  background:linear-gradient(
-    135deg,
-    #6a11cb,
-    #4a90e2
-  );
-
-  color:white;
-
-  cursor:pointer;
-
-  transition:0.3s;
-}
-
-.faq-btn:hover{
-  transform:scale(1.02);
-}
-
-.faq-texto{
-
-  max-height:0;
-
-  overflow:hidden;
-
-  background:white;
-
-  border-radius:0 0 12px 12px;
-
-  transition:max-height 0.4s ease;
-
-  padding:0 15px;
-}
-
-.faq-texto p{
-  margin:15px 0;
-}
-
-/* =========================
-   FAQ MEJORADO
-========================= */
-
-.faq-btn{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-}
-
-.icon{
-
-  font-size:22px;
-
-  transition:0.3s;
-}
-
-.faq-texto{
-
-  max-height:0;
-
-  overflow:hidden;
-
-  transition:max-height 0.5s ease;
-
-  background:#fff;
-
-  border-radius:0 0 12px 12px;
-}
-
-.dark-mode .faq-texto{
-  background:#1f1f1f;
-}
-
-
-/* =========================
-   SLIDER
-========================= */
-
-.slider{
-
-  position:relative;
-
-  width:100%;
-
-  max-width:800px;
-
-  margin:auto;
-
-  overflow:hidden;
-
-  border-radius:20px;
-}
-
-.slide{
-
-  width:100%;
-
-  display:none;
-
-  animation:fade 1s;
-}
-
-.slide.active{
-  display:block;
-}
-
-@keyframes fade{
-
-  from{
-    opacity:0.5;
-  }
-
-  to{
-    opacity:1;
-  }
-}
-
-
-/* =========================
-   TOAST
-========================= */
-
-.toast{
-
-  position:fixed;
-
-  bottom:30px;
-
-  left:50%;
-
-  transform:translateX(-50%);
-
-  background:#333;
-
-  color:white;
-
-  padding:15px 25px;
-
-  border-radius:30px;
-
-  opacity:0;
-
-  transition:0.5s;
-
-  z-index:5000;
-}
-
-.toast.show{
-  opacity:1;
-}
-
-
-/* =========================
-   EFECTOS BOTONES
-========================= */
-
-button:hover{
-
-  letter-spacing:1px;
-
-  transform:translateY(-4px) scale(1.03);
 }

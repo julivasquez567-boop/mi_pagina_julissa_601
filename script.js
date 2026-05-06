@@ -4,6 +4,7 @@ function mostrarMensaje() {
     let boton = event.target;
 
     if (mensaje.style.opacity === "1") {
+        // OCULTAR
 
         mensaje.style.opacity = "0";
         mensaje.style.transform = "translateY(30px)";
@@ -11,6 +12,8 @@ function mostrarMensaje() {
         boton.innerText = "Mostrar mensaje";
 
     } else {
+        // MOSTRAR
+        mensaje.innerHTML = "🐾 Cuida y protege a los animales 🐾";
 
         mensaje.innerHTML =
         "🐾 Cuida y protege a los animales 🐾";
@@ -35,6 +38,7 @@ function mostrarMensaje2() {
     let boton = event.target;
 
     if (mensaje.style.opacity === "1") {
+        // OCULTAR
 
         mensaje.style.opacity = "0";
         mensaje.style.transform = "translateY(30px)";
@@ -42,6 +46,8 @@ function mostrarMensaje2() {
         boton.innerText = "Algo sobre mí";
 
     } else {
+        // MOSTRAR
+        mensaje.innerHTML = "🎧 Mi pasatiempo favorito es escuchar música 🎧";
 
         mensaje.innerHTML =
         "🎧 Mi pasatiempo favorito es escuchar música 🎧";
@@ -88,6 +94,7 @@ function toggleModo() {
    GUARDAR MODO
 ========================= */
 
+// GUARDAR EL MODO AL RECARGAR
 window.onload = function () {
 
     let modo = localStorage.getItem("modo");
@@ -98,6 +105,7 @@ window.onload = function () {
 
         document.getElementById("modo-btn").innerHTML = "☀️";
     }
+}
 
     /* =========================
        PARTICLES
@@ -137,132 +145,3 @@ window.onload = function () {
     });
 
 }
-/* =========================
-   FAQ
-========================= */
-
-const faqBtns = document.querySelectorAll(".faq-btn");
-
-faqBtns.forEach(btn => {
-
-  btn.addEventListener("click", () => {
-
-    const texto = btn.nextElementSibling;
-
-    if(texto.style.maxHeight){
-
-      texto.style.maxHeight = null;
-
-    } else {
-
-      texto.style.maxHeight =
-      texto.scrollHeight + "px";
-    }
-
-  });
-
-});
-/* =========================
-   FAQ ACORDEÓN
-========================= */
-
-const faqBtns = document.querySelectorAll(".faq-btn");
-
-faqBtns.forEach(btn => {
-
-  btn.addEventListener("click", () => {
-
-    const texto = btn.nextElementSibling;
-    const icon = btn.querySelector(".icon");
-
-    texto.classList.toggle("activo");
-
-    if(texto.classList.contains("activo")){
-
-      texto.style.maxHeight =
-      texto.scrollHeight + "px";
-
-      icon.innerHTML = "−";
-
-    } else {
-
-      texto.style.maxHeight = null;
-
-      icon.innerHTML = "+";
-    }
-
-  });
-
-});
-
-
-/* =========================
-   CARRUSEL
-========================= */
-
-let slides =
-document.querySelectorAll(".slide");
-
-let index = 0;
-
-function cambiarSlide(){
-
-  slides[index].classList.remove("active");
-
-  index++;
-
-  if(index >= slides.length){
-    index = 0;
-  }
-
-  slides[index].classList.add("active");
-}
-
-setInterval(cambiarSlide, 3000);
-
-
-/* =========================
-   NOTIFICACIÓN
-========================= */
-
-function mostrarToast(texto){
-
-  const toast =
-  document.createElement("div");
-
-  toast.className = "toast";
-
-  toast.innerText = texto;
-
-  document.body.appendChild(toast);
-
-  setTimeout(() => {
-    toast.classList.add("show");
-  }, 100);
-
-  setTimeout(() => {
-
-    toast.classList.remove("show");
-
-    setTimeout(() => {
-      toast.remove();
-    }, 500);
-
-  }, 3000);
-}
-
-
-/* =========================
-   RETROALIMENTACIÓN
-========================= */
-
-document.querySelectorAll("button")
-.forEach(btn => {
-
-  btn.addEventListener("click", () => {
-
-    mostrarToast("✨ Acción realizada correctamente");
-
-  });
-
-});
