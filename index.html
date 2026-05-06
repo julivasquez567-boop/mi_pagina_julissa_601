@@ -1,222 +1,76 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi primera pagina web</title>
-
-    <!-- Tipografía moderna -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Página Personal</title>
 
-    <link rel="stylesheet" href="style.css"> 
-  </head>
-  <meta charset="UTF-8" />
-
-  <body>
-    <header>
-      <h1>Mi Página Personal</h1>
-    </header>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#pec">Proyecto PEC</a>
-    </nav>
-  <title>Mi Página Personal</title>
-
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-  <!-- Tipografía moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-      <p id="mensaje2"></p>
-      <button onclick="mostrarMensaje2()">Algo sobre mí</button>
-<br><br>
-      <img src="img/tarjeta.png" alt="Foto personal" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-      <p>Hola, mi nombre es Julissa.</p>
-      <p>Soy estudiante en el CECYCTEO-35.</p>
-      <p>Me gusta la tecnología y aprender en la escuela.</p>
-    </section>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
-    <section id="pec">
-      <h2>Proyecto Escolar Comunitario</h2>
 <body>
 
-      <h3>Huellas: cuidado animal y salud comunitaria</h3>
-  <!-- PARTICLES -->
-  <div id="particles-js"></div>
+<header>
+  <h1>Mi Página Personal ✨</h1>
+  <p>Proyecto escolar y bienestar animal 🐾</p>
+</header>
 
-      <p id="mensaje"></p>
-      <button onclick="mostrarMensaje()">Mostrar mensaje</button>
-<br><br>
-      <img src="img/banner_pec.png" alt="Proyecto PEC" />
-  <!-- HEADER -->
-  <header>
+<nav>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#pec">Proyecto PEC</a>
+  <a href="#galeria">Galería</a>
+  <a href="#preguntas">Preguntas</a>
+</nav>
 
-      <p>
-        Este proyecto busca el cuidado responsable de los perros en la
-        comunidad de San Antonino el Alto.
-      </p>
-    <h1>Mi Página Personal ✨</h1>
+<section id="sobre-mi" class="card">
+  <h2>Sobre mí 🌸</h2>
 
-      <p>
-        La problemática principal es la presencia de perros en la vía pública,
-        muchos de ellos sin esterilizar o sin vacunas.
-      </p>
-  </header>
+  <p id="mensaje2"></p>
+  <button onclick="mostrarMensaje2(event)">Algo sobre mí</button>
 
-      <p>
-        A través de este proyecto se busca crear conciencia sobre el bienestar
-        animal y la salud comunitaria.
-      </p>
-    </section>
-  <!-- NAV -->
-  <nav>
+  <img src="img/tarjeta.png" alt="Foto personal">
+  <p>Hola, mi nombre es Julissa.</p>
+</section>
 
-    <footer>
-      <p>2026 - Yulii</p>
-    </footer>
-    <a href="#sobre-mi">Sobre mí</a>
+<section id="pec" class="card">
+  <h2>Proyecto PEC 🐾</h2>
 
-    <script src="script.js"></script>
-    
-<a href="https://wa.me/9512699758?text=Hola%20quiero%20información" 
-   class="whatsapp-btn" 
-   target="_blank">
-    <a href="#pec">Proyecto PEC</a>
+  <p id="mensaje"></p>
+  <button onclick="mostrarMensaje(event)">Mostrar mensaje</button>
 
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-        alt="WhatsApp">
-</a>
-   
-  </nav>
+  <img src="img/banner_pec.png" alt="Proyecto PEC">
+</section>
 
-<a href="https://www.facebook.com/yupis.garcia.9" 
-   class="facebook-btn" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   
-   <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" 
-        alt="Facebook">
-</a>
-  <!-- SOBRE MI -->
-  <section id="sobre-mi" class="card">
+<section id="galeria" class="card">
+  <h2>Galería 📸</h2>
 
-    <h2>Sobre mí 🌸</h2>
+  <div class="slider">
+    <img class="slide active" src="img/perro1.jpg">
+    <img class="slide" src="img/perro2.jpg">
+    <img class="slide" src="img/perro3.jpg">
+  </div>
+</section>
 
-    <p id="mensaje2"></p>
+<section id="preguntas" class="card">
+  <h2>Preguntas Frecuentes 🐾</h2>
 
-    <button onclick="mostrarMensaje2()">
-      Algo sobre mí
-    </button>
+  <div class="faq">
+    <button class="faq-btn">¿Qué busca el proyecto?</button>
+    <div class="faq-texto"><p>Cuidado responsable animal.</p></div>
+  </div>
 
-<button id="modo-btn" onclick="toggleModo()">🌙</button>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <br><br>
+  <div class="faq">
+    <button class="faq-btn">¿Por qué esterilizar?</button>
+    <div class="faq-texto"><p>Reduce sobrepoblación.</p></div>
+  </div>
 
-<div id="particles-js"></div>
-    <img src="img/tarjeta.png" alt="Foto personal" />
+</section>
 
-<div class="card">
-  Mi proyecto
-</div>
-    <p>Hola, mi nombre es Julissa.</p>
+<footer>
+  <p>© 2026 - Yulii 💖</p>
+</footer>
 
-  </body>
-</html>
-    <p>Soy estudiante en el CECYCTEO-35.</p>
-
-    <p>Me gusta la tecnología y aprender en la escuela.</p>
-
-  </section>
-
-  <!-- PROYECTO -->
-  <section id="pec" class="card">
-
-    <h2>Proyecto Escolar Comunitario 🐾</h2>
-
-    <h3>Huellas: cuidado animal y salud comunitaria</h3>
-
-    <p id="mensaje"></p>
-
-    <button onclick="mostrarMensaje()">
-      Mostrar mensaje
-    </button>
-
-    <br><br>
-
-    <img src="img/banner_pec.png" alt="Proyecto PEC" />
-
-    <p>
-      Este proyecto busca el cuidado responsable de los perros
-      en la comunidad de San Antonino el Alto.
-    </p>
-
-    <p>
-      La problemática principal es la presencia de perros
-      en la vía pública, muchos de ellos sin esterilizar
-      o sin vacunas.
-    </p>
-
-    <p>
-      A través de este proyecto se busca crear conciencia
-      sobre el bienestar animal y la salud comunitaria.
-    </p>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <p>© 2026 - Yulii 💖</p>
-
-  </footer>
-
-  <!-- BOTÓN WHATSAPP -->
-  <a href="https://wa.me/9512699758?text=Hola%20quiero%20información"
-     class="whatsapp-btn"
-     target="_blank">
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-         alt="WhatsApp">
-
-  </a>
-
-  <!-- BOTÓN FACEBOOK -->
-  <a href="https://www.facebook.com/yupis.garcia.9"
-     class="facebook-btn"
-     target="_blank"
-     rel="noopener noreferrer">
-
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-         alt="Facebook">
-
-  </a>
-
-  <!-- BOTÓN MODO OSCURO -->
-  <button id="modo-btn" onclick="toggleModo()">
-    🌙
-  </button>
-
-  <!-- BOTÓN SUBIR -->
-  <button id="topBtn"
-    onclick="window.scrollTo({top:0,behavior:'smooth'})">
-
-    ⬆
-
-  </button>
-
-  <!-- LIBRERÍA PARTICLES -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
-
 </html>
