@@ -1,285 +1,188 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Página Personal</title>
 
-<head>
+    <!-- Tipografía -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <meta charset="UTF-8" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body>
+    <!-- PARTICLES -->
+    <div id="particles-js"></div>
 
-  <title>Mi Página Personal</title>
+    <!-- HEADER -->
+    <header>
+      <h1>Mi Página Personal ✨</h1>
+    </header>
 
-  <!-- Tipografía -->
-  <!-- Tipografía moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- NAV -->
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#pec">Proyecto PEC</a>
+      <a href="#preguntas">Preguntas Frecuentes 🐾</a>
+    </nav>
 
-  <!-- CSS -->
-@@ -24,16 +24,20 @@
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="card">
+      <h2>Sobre mí 🌸</h2>
 
-  <!-- HEADER -->
-  <header>
+      <p id="mensaje2"></p>
 
-    <h1>Mi Página Personal ✨</h1>
-    <p>Proyecto escolar y bienestar animal 🐾</p>
+      <button onclick="mostrarMensaje2(event)">Algo sobre mí</button>
 
-  </header>
+      <br /><br />
 
-  <!-- NAV -->
-  <nav>
+      <img src="img/tarjeta.png" alt="Foto personal" />
 
-    <a href="#sobre-mi">Sobre mí</a>
+      <p>Hola, mi nombre es Julissa.</p>
+      <p>Soy estudiante en el CECYCTEO-35.</p>
+      <p>Me gusta la tecnología y aprender en la escuela.</p>
+    </section>
 
-    <a href="#pec">Proyecto PEC</a>
-    <a href="#galeria">Galería</a>
-    <a href="#preguntas">Preguntas Frecuentes</a>
+    <!-- PROYECTO -->
+    <section id="pec" class="card">
+      <h2>Proyecto Escolar Comunitario 🐾</h2>
+      <h3>Huellas: cuidado animal y salud comunitaria</h3>
 
-<a href="#PREGUNTAS">Preguntas Frecuentes 🐾</a>
+      <p id="mensaje"></p>
 
-  </nav>
+      <button onclick="mostrarMensaje(event)">Mostrar mensaje</button>
 
-  <!-- SOBRE MI -->
-@@ -43,13 +47,13 @@ <h2>Sobre mí 🌸</h2>
+      <br /><br />
 
-    <p id="mensaje2"></p>
+      <img src="img/banner_pec.png" alt="Proyecto PEC" />
 
-    <button onclick="mostrarMensaje2(event)">
-    <button onclick="mostrarMensaje2()">
-      Algo sobre mí
-    </button>
-
-    <br><br>
-
-    <img src="img/tarjeta.png" alt="Foto personal">
-    <img src="img/tarjeta.png" alt="Foto personal" />
-
-    <p>Hola, mi nombre es Julissa.</p>
-
-@@ -68,13 +72,13 @@ <h3>Huellas: cuidado animal y salud comunitaria</h3>
-
-    <p id="mensaje"></p>
-
-    <button onclick="mostrarMensaje(event)">
-    <button onclick="mostrarMensaje()">
-      Mostrar mensaje
-    </button>
-
-    <br><br>
-
-    <img src="img/banner_pec.png" alt="Proyecto PEC">
-    <img src="img/banner_pec.png" alt="Proyecto PEC" />
-
-    <p>
-      Este proyecto busca el cuidado responsable de los perros
-@@ -91,100 +95,134 @@ <h3>Huellas: cuidado animal y salud comunitaria</h3>
-      A través de este proyecto se busca crear conciencia
-      sobre el bienestar animal y la salud comunitaria.
-    </p>
-<!-- GALERÍA -->
-<section class="card">
-
-  </section>
-  <h2>Galería del Proyecto 📸</h2>
-
-  <div class="slider">
-
-    <img class="slide active"
-      src="img/perro1.jpg">
-
-    <img class="slide"
-      src="img/perro2.jpg">
-
-  <!-- GALERÍA -->
-  <section id="galeria" class="card">
-    <img class="slide"
-      src="img/perro3.jpg">
-
-    <h2>Galería del Proyecto 📸</h2>
-  </div>
-
-    <div class="slider">
-</section>
-  <!-- PREGUNTAS FRECUENTES -->
-<section id="PREGUNTAS" class="card">
-
-      <img class="slide active" src="img/perro1.jpg" alt="Perro 1">
-  <h2>Preguntas Frecuentes 🐾</h2>
-
-      <img class="slide" src="img/perro2.jpg" alt="Perro 2">
-  <div class="faq">
-
-      <img class="slide" src="img/perro3.jpg" alt="Perro 3">
-    <button class="faq-btn">
-      <span>¿Qué busca el proyecto Huellas?</span>
-      <span class="icon">+</span>
-    </button>
-
-    <div class="faq-texto">
       <p>
-        Busca promover el cuidado responsable de los perros
-        y mejorar la salud comunitaria.
+        Este proyecto busca el cuidado responsable de los perros en la comunidad
+        de San Antonino el Alto.
       </p>
-    </div>
 
-  </section>
-  </div>
-
-  <!-- PREGUNTAS FRECUENTES -->
-  <section id="preguntas" class="card">
-  <div class="faq">
-
-    <h2>Preguntas Frecuentes 🐾</h2>
-    <button class="faq-btn">
-      <span>¿Por qué es importante esterilizar?</span>
-      <span class="icon">+</span>
-    </button>
-
-    <div class="faq-texto">
       <p>
-        Ayuda a reducir la sobrepoblación de perros
-        en situación de calle.
+        La problemática principal es la presencia de perros en la vía pública,
+        muchos de ellos sin esterilizar o sin vacunas.
       </p>
-    </div>
 
-    <div class="faq">
-  </div>
+      <p>
+        A través de este proyecto se busca crear conciencia sobre el bienestar
+        animal y la salud comunitaria.
+      </p>
+    </section>
 
-      <button class="faq-btn">
-        <span>¿Qué busca el proyecto Huellas?</span>
-        <span class="icon">+</span>
-      </button>
-</section>
-  <!-- Pregunta 1 -->
-  <div class="faq">
+    <!-- GALERÍA -->
+    <section class="card">
+      <h2>Galería del Proyecto 📸</h2>
 
-      <div class="faq-texto">
-        <p>
-          Busca promover el cuidado responsable de los perros
-          y mejorar la salud comunitaria.
-        </p>
+      <div class="slider">
+        <img class="slide active" src="img/perro1.jpg" />
+        <img class="slide" src="img/perro2.jpg" />
+        <img class="slide" src="img/perro3.jpg" />
       </div>
-    <button class="faq-btn">
-      ¿Qué busca el proyecto Huellas?
-    </button>
+    </section>
 
-    <div class="faq-texto">
-      <p>
-        Busca promover el cuidado responsable de los perros
-        y mejorar la salud comunitaria.
-      </p>
-    </div>
+    <!-- PREGUNTAS FRECUENTES -->
+    <section id="preguntas" class="card">
+      <h2>Preguntas Frecuentes 🐾</h2>
 
-    <div class="faq">
-  </div>
-
-      <button class="faq-btn">
-        <span>¿Por qué es importante esterilizar?</span>
-        <span class="icon">+</span>
-      </button>
-  <!-- Pregunta 2 -->
-  <div class="faq">
-
-      <div class="faq-texto">
-        <p>
-          Ayuda a reducir la sobrepoblación de perros
-          en situación de calle.
-        </p>
+      <div class="faq">
+        <button class="faq-btn">
+          <span>¿Qué busca el proyecto Huellas?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-texto">
+          <p>
+            Busca promover el cuidado responsable de los perros y mejorar la
+            salud comunitaria.
+          </p>
+        </div>
       </div>
-    <button class="faq-btn">
-      ¿Por qué es importante esterilizar?
-    </button>
 
-    <div class="faq-texto">
-      <p>
-        Porque ayuda a reducir la sobrepoblación de perros
-        en situación de calle.
-      </p>
-    </div>
-
-    <div class="faq">
-  </div>
-
-      <button class="faq-btn">
-        <span>¿Qué beneficios tiene vacunar a las mascotas?</span>
-        <span class="icon">+</span>
-      </button>
-  <!-- Pregunta 3 -->
-  <div class="faq">
-
-      <div class="faq-texto">
-        <p>
-          Protege a los animales de enfermedades y ayuda a cuidar
-          la salud de las personas.
-        </p>
+      <div class="faq">
+        <button class="faq-btn">
+          <span>¿Por qué es importante esterilizar?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-texto">
+          <p>
+            Ayuda a reducir la sobrepoblación de perros en situación de calle.
+          </p>
+        </div>
       </div>
-    <button class="faq-btn">
-      ¿Qué beneficios tiene vacunar a las mascotas?
-    </button>
 
-    <div class="faq-texto">
-      <p>
-        Protege a los animales de enfermedades y también
-        ayuda a cuidar la salud de las personas.
-      </p>
-    </div>
-
-    <div class="faq">
-  </div>
-
-      <button class="faq-btn">
-        <span>¿Cómo puedo ayudar?</span>
-        <span class="icon">+</span>
-      </button>
-  <!-- Pregunta 4 -->
-  <div class="faq">
-
-      <div class="faq-texto">
-        <p>
-          Puedes cuidar bien a tus mascotas, vacunarlas,
-          esterilizarlas y no abandonarlas.
-        </p>
+      <div class="faq">
+        <button class="faq-btn">
+          <span>¿Qué beneficios tiene vacunar a las mascotas?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-texto">
+          <p>
+            Protege a los animales de enfermedades y también a las personas.
+          </p>
+        </div>
       </div>
-    <button class="faq-btn">
-      ¿Cómo puedo ayudar?
+
+      <div class="faq">
+        <button class="faq-btn">
+          <span>¿Cómo puedo ayudar?</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-texto">
+          <p>
+            Puedes cuidar bien a tus mascotas, vacunarlas, esterilizarlas y no
+            abandonarlas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 - Yulii 💖</p>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a
+      href="https://wa.me/9512699758?text=Hola%20quiero%20información"
+      class="whatsapp-btn"
+      target="_blank"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </a>
+
+    <!-- FACEBOOK -->
+    <a
+      href="https://www.facebook.com/yupis.garcia.9"
+      class="facebook-btn"
+      target="_blank"
+    >
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
+    </a>
+
+    <!-- MODO OSCURO -->
+    <button id="modo-btn" onclick="toggleModo()">🌙</button>
+
+    <!-- SUBIR -->
+    <button
+      id="topBtn"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      ⬆
     </button>
 
-    <div class="faq-texto">
-      <p>
-        Puedes cuidar bien a tus mascotas, vacunarlas,
-        esterilizarlas y no abandonarlas.
-      </p>
-    </div>
+    <!-- PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-  </section>
-  </div>
-
-</section>
-
-  <!-- FOOTER -->
-  <footer>
-
-    <p>© 2026 - Yulii 💖</p>
-
-  </footer>
-
-  <!-- BOTÓN WHATSAPP -->
-@@ -216,15 +254,17 @@ <h2>Preguntas Frecuentes 🐾</h2>
-  <!-- BOTÓN SUBIR -->
-  <button id="topBtn"
-    onclick="window.scrollTo({top:0,behavior:'smooth'})">
-
-    ⬆
-
-  </button>
-
-  <!-- PARTICLES -->
-  <!-- LIBRERÍA PARTICLES -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
-
-</body>
-</html>
-```
-
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
 </html>
