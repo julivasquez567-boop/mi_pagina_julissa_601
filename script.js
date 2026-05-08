@@ -164,3 +164,23 @@ window.addEventListener("load", () => {
     card.style.transform = "translateY(0)";
   });
 });
+
+/* =========================
+   FORMULARIO
+========================= */
+
+const formulario = document.getElementById("formularioContacto");
+
+if (formulario) {
+
+  formulario.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    mostrarToast("✅ Mensaje enviado correctamente");
+
+    formulario.reset();
+
+  });
+
+}
